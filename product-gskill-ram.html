@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>G.SKILL DDR5 RAM - TechCore Components</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #d0d0d0;
+            background-color: #1a1a1a;
+        }
+
+        .navbar {
+            background-color: #2a2a2a;
+            color: #d0d0d0;
+            padding: 1rem 0;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+            border-bottom: 2px solid #404040;
+        }
+
+        .nav-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 2rem;
+        }
+
+        .nav-logo {
+            font-size: 1.8rem;
+            font-weight: bold;
+            color: #b0b0b0;
+        }
+
+        .nav-menu {
+            display: flex;
+            list-style: none;
+            gap: 2rem;
+        }
+
+        .nav-link {
+            color: #d0d0d0;
+            text-decoration: none;
+            font-weight: 500;
+            transition: all 0.3s ease;
+            padding-bottom: 0.5rem;
+            border-bottom: 2px solid transparent;
+        }
+
+        .nav-link:hover,
+        .nav-link.active {
+            border-bottom: 2px solid #707070;
+            color: #f0f0f0;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 2rem;
+            min-height: calc(100vh - 200px);
+        }
+
+        h1 {
+            color: #b0b0b0;
+            margin-bottom: 1rem;
+            font-size: 2.5rem;
+        }
+
+        h2 {
+            color: #a0a0a0;
+            margin-top: 1.5rem;
+            margin-bottom: 1rem;
+        }
+
+        h3 {
+            color: #909090;
+            margin-bottom: 0.5rem;
+        }
+
+        .product-detail {
+            background: #2a2a2a;
+            border-radius: 8px;
+            padding: 2rem;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.5);
+            border: 1px solid #404040;
+        }
+
+        .product-images {
+            margin: 2rem 0;
+            text-align: center;
+        }
+
+        .product-images img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px;
+            display: inline-block;
+            background-color: #1a1a1a;
+            padding: 1rem;
+            border: 1px solid #404040;
+        }
+
+        .price-stock {
+            background: #323232;
+            padding: 1.5rem;
+            border-radius: 8px;
+            border-left: 4px solid #505050;
+            margin: 2rem 0;
+            border: 2px solid #404040;
+        }
+
+        .product-price {
+            color: #b0b0b0;
+            font-size: 2.5rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .stock {
+            color: #909090;
+            font-size: 1.1rem;
+        }
+
+        .description {
+            margin: 2rem 0;
+            padding: 1.5rem;
+            background: #323232;
+            border-left: 4px solid #505050;
+            border-radius: 4px;
+            border: 2px solid #404040;
+        }
+
+        .product-specs {
+            margin: 2rem 0;
+        }
+
+        .specs-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 1rem;
+            background-color: #2a2a2a;
+            border: 2px solid #404040;
+        }
+
+        .specs-table tr {
+            border-bottom: 1px solid #404040;
+        }
+
+        .specs-table tr:hover {
+            background-color: #323232;
+        }
+
+        .specs-table td {
+            padding: 1rem;
+            border-right: 1px solid #404040;
+            color: #d0d0d0;
+        }
+
+        .specs-table td:last-child {
+            border-right: none;
+        }
+
+        .specs-table td:first-child {
+            width: 40%;
+            font-weight: bold;
+            color: #b0b0b0;
+        }
+
+        .buy-btn {
+            background: #404040;
+            color: #d0d0d0;
+            padding: 1rem 2rem;
+            border: 1px solid #505050;
+            border-radius: 5px;
+            font-size: 1.1rem;
+            font-weight: bold;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            width: 100%;
+            max-width: 400px;
+            margin-top: 1rem;
+        }
+
+        .buy-btn:hover {
+            background: #505050;
+            border: 1px solid #606060;
+            color: #f0f0f0;
+        }
+
+        .footer {
+            background: #1a1a1a;
+            color: #909090;
+            text-align: center;
+            padding: 2rem;
+            margin-top: 3rem;
+            border-top: 2px solid #404040;
+        }
+
+        @media (max-width: 768px) {
+            .nav-container {
+                flex-direction: column;
+                gap: 1rem;
+            }
+
+            .nav-menu {
+                flex-direction: column;
+                gap: 1rem;
+                text-align: center;
+            }
+
+            h1 {
+                font-size: 1.8rem;
+            }
+
+            .buy-btn {
+                max-width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <h2 class="nav-logo">TechCore Components</h2>
+            <ul class="nav-menu">
+                <li><a href="index.html" class="nav-link">Home</a></li>
+                <li><a href="about.html" class="nav-link">About</a></li>
+                <li><a href="contact.html" class="nav-link">Contact Us</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="container">
+        <div class="product-detail">
+            <h1>G.SKILL DDR5 RAM</h1>
+            
+            <div class="product-images">
+                <img src="images/G,Skill ram.jpg" alt="G.SKILL DDR5 RAM">
+            </div>
+
+            <div class="price-stock">
+                <h2 class="product-price">$89.99</h2>
+                <p class="stock"><strong>Stock Availability:</strong> 112 units in stock</p>
+            </div>
+
+            <div class="description">
+                <h3>Description</h3>
+                <p>G.SKILL's DDR5 memory delivers next-generation performance with improved speed and efficiency. Featuring Samsung's fastest DDR5 DRAM chips and custom PCBs, this memory kit is optimized for the latest AM5 and Intel LGA1700 platforms. With support for JEDEC DDR5-5600 standard and beyond, it offers exceptional performance for gaming and multitasking workloads.</p>
+            </div>
+
+            <div class="product-specs">
+                <h3>Product Specifications</h3>
+                <table class="specs-table">
+                    <tr>
+                        <td><strong>Capacity</strong></td>
+                        <td>32GB (2x16GB)</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Speed</strong></td>
+                        <td>DDR5-6000</td>
+                    </tr>
+                    <tr>
+                        <td><strong>CAS Latency</strong></td>
+                        <td>CL30</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Voltage</strong></td>
+                        <td>1.25V</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Form Factor</strong></td>
+                        <td>UDIMM</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Compatibility</strong></td>
+                        <td>AM5 / LGA1700</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Barcode</strong></td>
+                        <td>2345678901234</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Weight</strong></td>
+                        <td>320g</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Warranty</strong></td>
+                        <td>Lifetime</td>
+                    </tr>
+                </table>
+            </div>
+
+            <button class="buy-btn">Buy Now</button>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <p>&copy; 2026 TechCore Components. All rights reserved.</p>
+    </footer>
+</body>
+</html>
